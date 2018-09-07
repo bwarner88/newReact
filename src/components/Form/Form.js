@@ -6,7 +6,8 @@ class Form extends Component {
   state = {
     firstName: "",
     lastName: "",
-    password: ""
+    password: "",
+    username:""
   };
 
   handleInputChange = event => {
@@ -73,6 +74,13 @@ class Form extends Component {
             onChange={this.handleInputChange}
             type="password"
             placeholder="Password..."
+          />
+          <input 
+          value={this.state.username}
+          name="username"
+          onChange={this.handleInputChange}
+          type="text"
+          placeholder="Enter Username..."
           />
           <button onClick={this.handleFormSubmit}>Submit</button>
         </form>
